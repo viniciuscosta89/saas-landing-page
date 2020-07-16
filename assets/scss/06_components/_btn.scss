@@ -1,0 +1,93 @@
+/* ==========================================================================
+  #BUTTONS
+========================================================================== */
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+
+.c-btn {
+  border: none;
+  border-radius: $global-radius;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font;
+  font-size: 1rem;
+  padding: 0.75em 2em;
+  position: relative;
+  text-align: center;
+  transition: $global-transition;
+
+  &--primary {
+    background-color: $primary-color;
+    box-shadow: $global-shadow;
+    color: $white;
+
+    &:hover {
+      background-color: $primary-color-dark;
+      box-shadow: $global-shadow-hover;
+      transform: scale(1.1);
+    }
+  }
+
+  &--secondary {
+    background-color: $white;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color-dark;
+      color: $white;
+    }
+  }
+
+  &--small {
+    font-size: 14px;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &[disabled] {
+    background-color: #bbc;
+    transform: scale(1);
+
+    &:hover {
+      background-color: #bbc;
+      box-shadow: $global-shadow;
+      cursor: default;
+      transform: scale(1);
+    }
+  }
+
+  &--position {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    overflow: hidden;
+    z-index: 0;
+
+    > span {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: $primary-color;
+      transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $white;
+
+      > span {
+        width: 300%;
+        height: 400%;
+      }
+    }
+  }
+}

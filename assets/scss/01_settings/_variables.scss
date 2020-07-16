@@ -1,0 +1,38 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+$global-radius: 3px !default;
+$global-transition: all 0.5s ease-in-out !default;
+$global-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
+$global-shadow-hover: 0 6px 12px rgba(30, 60, 90, 0.2);
+
+/* Fonts
+   ========================================================================== */
+
+$font: -apple-system, BlinkMacSystemFont, 'Karla', sans-serif !default;
+
+/* Colors
+   ========================================================================== */
+
+$primary-color: #1290a4;
+$primary-color-dark: darken($primary-color, 15%);
+$primary-color-light: lighten($primary-color, 15%);
+
+$secondary-color: #f46f7c;
+$secondary-color-dark: darken($secondary-color, 15%);
+$secondary-color-light: rgba(244, 111, 124, 0.1);
+
+$dark-gray: #1f1f1f;
+
+$white: #fff;
+$black: #000;
+
+$square: #fe92e4;
+$triangle: #00d7d0;
+$circle: #ff5950;
+$cross: #9bcbfe;
+
+$card-height: 300px;

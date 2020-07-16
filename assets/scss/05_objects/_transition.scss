@@ -1,0 +1,45 @@
+.v {
+  &-enter {
+    opacity: 0;
+
+    &-active {
+      transition: $global-transition;
+    }
+  }
+
+  &-leave {
+    &-active {
+      transition: $global-transition;
+    }
+
+    &-to {
+      opacity: 0;
+    }
+  }
+
+  &-move {
+    transition: $global-transition;
+  }
+}
+
+.list {
+  &-enter {
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+
+    &-active {
+      transition: $global-transition;
+    }
+  }
+
+  &-leave {
+    &-active {
+      transition: $global-transition;
+    }
+
+    &-to {
+      opacity: 0;
+      transform: translate3d(20px, 0, 0);
+    }
+  }
+}

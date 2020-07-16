@@ -1,0 +1,10 @@
+.o-nav {
+  @include flex(center, center);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  &__link {
+    color: $white;
+  }
+}

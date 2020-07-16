@@ -1,0 +1,41 @@
+.o-pagination {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / -1;
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__link {
+    background-color: $white;
+    border: none;
+    border-radius: $global-radius;
+    color: $primary-color;
+    display: inline-flex;
+    padding: 0.25rem 0.5rem;
+    transition: $global-transition;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+      cursor: pointer;
+    }
+
+    &.router-link-exact-active {
+      background-color: $primary-color;
+      color: $white;
+      transform: scale(1.1);
+    }
+
+    &--start {
+      margin-right: 0.5rem;
+    }
+
+    &--end {
+      margin-left: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.error {
+  font-size: 1.5rem;
+  margin: 1rem auto;
+
+  &__item {
+    color: $secondary-color;
+    text-align: center;
+
+    > a {
+      display: none;
+    }
+  }
+}

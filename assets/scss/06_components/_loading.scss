@@ -1,0 +1,55 @@
+.c-loading {
+  display: grid;
+  grid-template-areas:
+    'triangle circle'
+    'cross square';
+  grid-gap: 1rem;
+  text-align: center;
+  margin-top: 80px;
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+
+  &__item {
+    display: inline-block;
+    animation: playstation 3s ease-in-out infinite;
+    fill: $white;
+
+    &--triangle {
+      grid-area: triangle;
+    }
+
+    &--circle {
+      animation-delay: .5s;
+      grid-area: circle;
+    }
+
+    &--square {
+      animation-delay: 1s;
+      grid-area: square;
+    }
+
+    &--cross {
+      animation-delay: 2s;
+      grid-area: cross;
+    }
+  }
+}
+
+@keyframes playstation {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(0) rotate(120deg);
+  }
+
+  70% {
+    transform: scale(0) rotate(-120deg)
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
