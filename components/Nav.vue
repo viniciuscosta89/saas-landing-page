@@ -2,7 +2,7 @@
   <nav class="c-nav">
     <div class="o-container c-nav__container">
       <router-link to="/">
-        <img :src="getLogo(logo)" alt="Logo" />
+        <img :src="getImg(logo)" alt="Logo" />
       </router-link>
       <ul class="c-nav__list">
         <li v-for="(link, index) in links" :key="index" class="c-nav__item">
@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import { getImg } from '@/middleware/helpers'
+
 export default {
   name: 'Nav',
   props: {
@@ -41,10 +43,7 @@ export default {
     },
   },
   methods: {
-    getLogo(path) {
-      const image = require.context('~/assets/image/', false, /\.png|\.jpg$/)
-      return image(`./${path}`)
-    },
+    getImg,
   },
 }
 </script>

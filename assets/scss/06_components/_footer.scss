@@ -1,9 +1,36 @@
 .c-footer {
-  background-color: $primary-color;
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 25px 0;
+  padding: 3rem 0;
   position: relative;
-  text-align: center;
-  top: 72px;
+
+  @media (min-width: 1024px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 6rem 0;
+  }
+
+  &-bottom {
+    @media (min-width: 1024px) {
+      @include grid(repeat(2, 1fr), 2rem);
+    }
+
+    &__col {
+      @include flex(false, flex-start, column);
+    }
+
+    &__img {
+      margin-bottom: 1.5rem;
+
+      @media (min-width: 1024px) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__text {
+      color: $light-gray-3;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+  }
 }

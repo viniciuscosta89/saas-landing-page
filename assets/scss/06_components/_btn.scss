@@ -14,7 +14,9 @@
   display: inline-block;
   font-family: $font;
   font-size: 1rem;
-  padding: 0.75em 2em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  padding: 1em 2em;
   position: relative;
   text-align: center;
   transition: $global-transition;
@@ -32,17 +34,20 @@
   }
 
   &--secondary {
-    background-color: $white;
-    color: $primary-color;
+    background-color: $secondary-color;
+    color: $white;
 
     &:hover {
-      background-color: $primary-color-dark;
-      color: $white;
+      background-color: $secondary-color-dark;
     }
   }
 
   &--small {
     font-size: 14px;
+  }
+
+  &--big {
+    font-size: 1.25rem;
   }
 
   &--block {

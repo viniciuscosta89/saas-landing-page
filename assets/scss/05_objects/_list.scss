@@ -1,0 +1,17 @@
+.o-list {
+  display: block;
+  font-size: 1.25rem;
+  padding-top: 1.5rem;
+
+  &__item {
+    margin-bottom: 0.75rem;
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+
+    &--colored {
+      color: $primary-color;
+    }
+  }
+}

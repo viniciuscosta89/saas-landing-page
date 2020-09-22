@@ -22,3 +22,15 @@
     wrap: $wrap;
   }
 }
+
+@mixin grid($templateColumns: false, $gridGap: false) {
+  display: grid;
+
+  @if ($templateColumns) {
+    grid-template-columns: $templateColumns;
+  }
+
+  @if ($gridGap) {
+    grid-gap: $gridGap;
+  }
+}

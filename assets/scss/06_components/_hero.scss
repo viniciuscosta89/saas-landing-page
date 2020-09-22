@@ -1,0 +1,55 @@
+.c-hero {
+  padding: 4rem 0 3rem;
+
+  @media (min-width: 1024px) {
+    padding: 7rem 0 7rem;
+  }
+
+  &__body {
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+    }
+  }
+
+  &__img {
+    margin-bottom: 2rem;
+
+    @media (min-width: 1024px) {
+      order: 1;
+    }
+  }
+
+  &__content {
+    @media (min-width: 1024px) {
+      order: 0;
+    }
+  }
+
+  &__title {
+    font-size: 2.75rem;
+
+    @media (min-width: 1024px) {
+      font-size: 4rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .o-form {
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    padding: 1.5em 2.5em;
+  }
+}

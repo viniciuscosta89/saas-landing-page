@@ -1,0 +1,84 @@
+.c-2-col-content {
+  @include grid(false, 1.5rem);
+  margin-bottom: 2.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--img-text {
+    @media (min-width: 768px) {
+      align-items: center;
+      grid-template-areas: 'img content';
+    }
+  }
+
+  &--text-img {
+    @media (min-width: 768px) {
+      align-items: center;
+      grid-template-areas: 'content img';
+    }
+  }
+
+  &__img {
+    @media (max-width: 767px) {
+      padding: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      grid-area: img;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    letter-spacing: -3px;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__content {
+    @media (min-width: 768px) {
+      grid-area: content;
+    }
+  }
+
+  &__text {
+    font-size: larger;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+
+    &--bottom {
+      color: $gray;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__link {
+    color: $primary-color;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  &__label {
+    font-size: larger;
+    margin-right: 1rem;
+  }
+
+  &__separator {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 1.5rem 0;
+  }
+
+  .c-btn {
+    font-size: large;
+  }
+}

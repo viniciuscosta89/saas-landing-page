@@ -1,0 +1,20 @@
+.o-icon {
+  font-size: 1.5em;
+  @include flex(center, center);
+  position: absolute;
+  right: 0;
+  width: 3rem;
+  height: 100%;
+  transform-origin: center center;
+  transition: $global-transition;
+
+  &__arrow {
+    &--down {
+      transform: rotate(-270deg);
+    }
+
+    &--open {
+      transform: rotate(-90deg);
+    }
+  }
+}
