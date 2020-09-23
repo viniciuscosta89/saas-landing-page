@@ -13,8 +13,8 @@
 
     <p class="c-pricing-cards__extra-info">
       <span class="u-text--gray">Still confused?</span>
-      <router-link to="/" class="c-pricing-cards__link"
-        >Check our full feature list</router-link
+      <NuxtLink  to="/" class="c-pricing-cards__link"
+        >Check our full feature list</NuxtLink
       >
     </p>
   </div>

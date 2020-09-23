@@ -1,20 +1,20 @@
 <template>
   <div class="c-mobile-nav">
     <div class="c-mobile-nav__left">
-      <router-link to="/">
+      <NuxtLink  to="/">
         <img :src="getImg(logo)" alt="Logo" class="c-mobile-nav__logo" />
-      </router-link>
+      </NuxtLink>
     </div>
 
     <div class="c-mobile-nav__right">
       <div v-if="windowWidth > 500" class="c-nav__user">
         <ul class="c-nav__list">
           <li class="c-nav__item">
-            <router-link class="c-nav__link" to="/sign-in">Sign In</router-link>
-            <router-link
+            <NuxtLink  class="c-nav__link" to="/sign-in">Sign In</NuxtLink>
+            <NuxtLink
               class="c-btn c-btn--primary c-btn--medium"
               to="/get-started"
-              >Get Started</router-link
+              >Get Started</NuxtLink
             >
           </li>
         </ul>
@@ -49,13 +49,13 @@
           :key="index"
           class="c-mobile-nav__item"
         >
-          <router-link
+          <NuxtLink
             v-if="!link.children"
             class="c-mobile-nav__link"
             :to="link.url"
             >{{ link.name }}
-          </router-link>
-          <router-link
+          </NuxtLink>
+          <NuxtLink
             v-else
             class="c-mobile-nav__link"
             to="#"
@@ -73,7 +73,7 @@
             >
               >
             </span>
-          </router-link>
+          </NuxtLink>
 
           <ul
             v-if="link.children"

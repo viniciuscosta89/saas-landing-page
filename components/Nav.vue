@@ -1,14 +1,14 @@
 <template>
   <nav class="c-nav">
     <div class="o-container c-nav__container">
-      <router-link to="/">
+      <NuxtLink  to="/">
         <img :src="getImg(logo)" alt="Logo" />
-      </router-link>
+      </NuxtLink>
       <ul class="c-nav__list">
         <li v-for="(link, index) in links" :key="index" class="c-nav__item">
-          <router-link class="c-nav__link" :to="link.url">{{
+          <NuxtLink  class="c-nav__link" :to="link.url">{{
             link.name
-          }}</router-link>
+          }}</NuxtLink>
 
           <ul v-if="link.children" class="c-nav__sublist">
             <li
@@ -16,12 +16,12 @@
               :key="subKey"
               class="c-nav__subitem"
             >
-              <router-link class="c-nav__sublink" :to="subItem.url">
+              <NuxtLink  class="c-nav__sublink" :to="subItem.url">
                 <strong class="c-nav__subtitle">{{ subItem.name }}</strong>
                 <span class="c-nav__subdescription">{{
                   subItem.description
                 }}</span>
-              </router-link>
+              </NuxtLink>
             </li>
           </ul>
         </li>
@@ -30,11 +30,11 @@
       <div class="c-nav__user">
         <ul class="c-nav__list">
           <li class="c-nav__item">
-            <router-link class="c-nav__link" to="/sign-in">Sign In</router-link>
-            <router-link
+            <NuxtLink  class="c-nav__link" to="/sign-in">Sign In</NuxtLink>
+            <NuxtLink
               class="c-btn c-btn--primary c-btn--medium"
               to="/get-started"
-              >Get Started</router-link
+              >Get Started</NuxtLink
             >
           </li>
         </ul>

@@ -66,9 +66,9 @@
     </main>
 
     <footer class="c-pricing-card__footer">
-      <router-link to="/" class="c-btn c-btn--primary">
+      <NuxtLink  to="/" class="c-btn c-btn--primary">
         Start Free Trial
-      </router-link>
+      </NuxtLink>
       <div
         class="c-pricing-card__text c-pricing-card__text--smaller u-text--gray"
       >

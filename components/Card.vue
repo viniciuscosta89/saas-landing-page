@@ -11,13 +11,13 @@
     </main>
 
     <footer class="c-card__footer">
-      <router-link class="c-card__link" to="/">
+      <NuxtLink  class="c-card__link" to="/">
         <span class="c-card__link--label">{{ link }}</span>
         <font-awesome-icon
           class="c-card__link-icon"
           :icon="['fas', 'chevron-right']"
         />
-      </router-link>
+      </NuxtLink>
     </footer>
   </article>
 </template>
