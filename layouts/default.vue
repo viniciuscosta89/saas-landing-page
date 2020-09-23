@@ -31,12 +31,12 @@ export default {
             },
             {
               name: 'SaaS Application',
-              url: '',
+              url: 'saas-application',
               description: 'Best for Mobile App Presentation',
             },
             {
-              name: ' SaaS Subscription',
-              url: '',
+              name: 'SaaS Subscription',
+              url: 'saas-subscription',
               description: 'Best for Mobile App Presentation',
             },
           ],
@@ -73,6 +73,8 @@ export default {
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize)
     })
+
+    this.onResize()
   },
   methods: {
     onResize() {

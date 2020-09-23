@@ -9,8 +9,24 @@
           <router-link class="c-nav__link" :to="link.url">{{
             link.name
           }}</router-link>
+
+          <ul v-if="link.children" class="c-nav__sublist">
+            <li
+              v-for="(subItem, subKey) in link.children"
+              :key="subKey"
+              class="c-nav__subitem"
+            >
+              <router-link class="c-nav__sublink" :to="subItem.url">
+                <strong class="c-nav__subtitle">{{ subItem.name }}</strong>
+                <span class="c-nav__subdescription">{{
+                  subItem.description
+                }}</span>
+              </router-link>
+            </li>
+          </ul>
         </li>
       </ul>
+
       <div class="c-nav__user">
         <ul class="c-nav__list">
           <li class="c-nav__item">

@@ -10,15 +10,76 @@
     @include flex(false, center);
   }
 
+  &__item {
+    position: relative;
+  }
+
   &__link {
     color: $dark-gray;
     font-weight: 400;
     padding: 1rem 1.5rem;
+
+    &:hover {
+      color: $primary-color;
+
+      + .c-nav__sublist {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+      }
+    }
   }
 
   &__user {
     @media (max-width: 1023px) {
       margin-right: 2rem;
+    }
+  }
+
+  &__sub {
+    &list {
+      background-color: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 0.5rem;
+      @include grid(1fr 1fr, 1.5rem 2.5rem);
+      justify-content: center;
+      padding: 2rem;
+      position: absolute;
+      left: 0;
+      top: 2rem;
+      opacity: 0;
+      transform: translate3d(0, 1rem, 0);
+      transition: $global-transition;
+      visibility: hidden;
+      z-index: 0;
+
+      &:hover {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+        z-index: 1;
+      }
+    }
+
+    &link {
+      @include flex(false, false, column);
+    }
+
+    &title {
+      color: $dark-gray;
+      margin-bottom: .5rem;
+      transition: $global-transition;
+      white-space: nowrap;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    &description {
+      color: $gray;
+      font-size: 14px;
+      white-space: nowrap;
     }
   }
 }

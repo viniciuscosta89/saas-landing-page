@@ -6,8 +6,8 @@
       </router-link>
     </div>
 
-    <div v-if="windowWidth > 500" class="c-mobile-nav__right">
-      <div class="c-nav__user">
+    <div class="c-mobile-nav__right">
+      <div v-if="windowWidth > 500" class="c-nav__user">
         <ul class="c-nav__list">
           <li class="c-nav__item">
             <router-link class="c-nav__link" to="/sign-in">Sign In</router-link>
@@ -137,6 +137,8 @@ export default {
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize)
     })
+
+    this.onResize()
   },
   methods: {
     getImg,
