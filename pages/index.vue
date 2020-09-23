@@ -34,7 +34,7 @@
               Create custom landing pages with Shades that convert more visitors
               than any website, no coding required.
             </div>
-            <NuxtLink  to="/" class="c-2-col-content__link">
+            <NuxtLink to="/" class="c-2-col-content__link">
               <span class="c-2-col-content__label">Learn more</span>
               <font-awesome-icon :icon="['fas', 'chevron-right']" />
             </NuxtLink>
@@ -112,7 +112,7 @@
               Interested to see how it works? Schedule a free demo to get to
               learn everything you need to know.
             </div>
-            <NuxtLink  to="/" class="c-btn c-btn--secondary">
+            <NuxtLink to="/" class="c-btn c-btn--secondary">
               Schedule A Demo
             </NuxtLink>
           </div>
@@ -277,6 +277,9 @@ export default {
         },
       ],
     }
+  },
+  mounted() {
+    document.title = 'SaaS Landing Page Template | NuxtJS'
   },
   methods: {
     getImg,

@@ -11,7 +11,7 @@
     </main>
 
     <footer class="c-card__footer">
-      <NuxtLink  class="c-card__link" to="/">
+      <NuxtLink class="c-card__link" to="/">
         <span class="c-card__link--label">{{ link }}</span>
         <font-awesome-icon
           class="c-card__link-icon"

@@ -1,7 +1,7 @@
 <template>
   <div class="c-mobile-nav">
     <div class="c-mobile-nav__left">
-      <NuxtLink  to="/">
+      <NuxtLink to="/">
         <img :src="getImg(logo)" alt="Logo" class="c-mobile-nav__logo" />
       </NuxtLink>
     </div>
@@ -10,7 +10,7 @@
       <div v-if="windowWidth > 500" class="c-nav__user">
         <ul class="c-nav__list">
           <li class="c-nav__item">
-            <NuxtLink  class="c-nav__link" to="/sign-in">Sign In</NuxtLink>
+            <NuxtLink class="c-nav__link" to="/sign-in">Sign In</NuxtLink>
             <NuxtLink
               class="c-btn c-btn--primary c-btn--medium"
               to="/get-started"

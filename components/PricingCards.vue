@@ -13,7 +13,7 @@
 
     <p class="c-pricing-cards__extra-info">
       <span class="u-text--gray">Still confused?</span>
-      <NuxtLink  to="/" class="c-pricing-cards__link"
+      <NuxtLink to="/" class="c-pricing-cards__link"
         >Check our full feature list</NuxtLink
       >
     </p>
